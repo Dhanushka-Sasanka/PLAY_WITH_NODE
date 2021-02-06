@@ -41,16 +41,31 @@ const server= http.createServer((req , res)=>{
 
     if(requestURL === '/messege'){
         res.setHeader('Content-Type','text/html');
-
-        if(requestMethod === 'POST') {
-        res.setHeader('Location','/');
-        res.statusCode=302;
-        fileSystem.writeFileSync('message.txt', "THIS IS DUMMY DATA....!");
-        }
-        // res.setHeader('Location','/');
         
+        if(requestMethod === 'POST') {
+        // res.setHeader('Location','/');
+        // res.statusCode=302;
+        // fileSystem.writeFileSync('message.txt', "THIS IS DUMMY DATA....!");
+
+        const body = [];
+        req.on('data',(chank)=>{
+            body.push(chank);
+            console.log(chank);
+        });
+
+        return req.on('end',()=>{
+            const prasedBody = Buffer.concat(body).toString();
+            console.log(prasedBody);
+            const messege = prasedBody.split('=')[1];
+            fileSystem.writeFileSync('messegeFromRequest.txt', messege);
+            res.setHeader('Location','/');
+            res.statusCode=302;
+            return res.end();
+        });
 
 
+        }
+        
         res.write('<html>');
         res.write('<head>');
         res.write('</head>');
@@ -76,8 +91,6 @@ const server= http.createServer((req , res)=>{
 
     // process.exit();          //terminate server by force/
 });
-
-
 
 server.listen(3000 ,()=>{
     console.log("Server is running at port 3000..."); 
