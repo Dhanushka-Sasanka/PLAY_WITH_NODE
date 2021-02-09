@@ -70,6 +70,29 @@ const requestHandler = (req, res) => {
 
     // process.exit();          //terminate server by force/
 }
+const somethingText = "Hello I am Some text...."
+// Ways to export a Module In NODE 
 
-module.exports.requestHandler = requestHandler; 
-module.exports.somethingText = "Hello Node , I AM NEW BEA.."; 
+// 1st
+// module.exports = requestHandler; 
+
+
+//2nd
+// module.exports.requestHandler = requestHandler; 
+// module.exports.somethingText = "Hello Node , I AM NEW BEA.. 2"; 
+
+// 3rd
+// module.exports = {
+//     "requestHandler":requestHandler,
+//     "somethingText": "Hello Node , I AM NEW BEA.. 3" 
+// }
+
+//4th 
+// shortcut in NODE 
+ exports.requestHandler = requestHandler;
+ exports.somethingText = "Hello Node , I AM NEW BEA.. 4";
+
+
+
+
+ 
