@@ -1,0 +1,23 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "description": "this is the practice project basics to advance learning",
+  "main": "paly-with-node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "nodemon play-with-node.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dhanushka-Sasanka/PLAY_WITH_NODE.git"
+  },
+  "author": "Dhanushka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dhanushka-Sasanka/PLAY_WITH_NODE/issues"
+  },
+  "homepage": "https://github.com/Dhanushka-Sasanka/PLAY_WITH_NODE#readme",
+  "dependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

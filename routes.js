@@ -45,7 +45,6 @@ const requestHandler = (req, res) => {
 
 
         }
-
         res.write('<html>');
         res.write('<head>');
         res.write('</head>');
@@ -70,7 +69,8 @@ const requestHandler = (req, res) => {
 
     // process.exit();          //terminate server by force/
 }
-const somethingText = "Hello I am Some text...."
+
+// const somethingText = "Hello I am Some text...."
 // Ways to export a Module In NODE 
 
 // 1st
