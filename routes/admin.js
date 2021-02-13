@@ -1,21 +1,13 @@
-const { response } = require("express");
 
 const express = require('express');
+const path = require('path');
 
 const route = express.Router();
 
 
 route.get('/add-customer', (req, res, next) => {
     console.log("route 2");
-    res.send(`<html>
-        <head><body>
-                <form action="/customer" method="POST">
-                    <input type="text" name="customerName" />
-                    <button type="submit">ADD CUSTOMER</button>
-                </form>
-            </body>
-        </head>
-    </html>`);
+    res.sendFile(path.join(__dirname , '../' , 'views','add-customer.html'));
 
 });
 
