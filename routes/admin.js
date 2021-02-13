@@ -2,10 +2,10 @@ const { response } = require("express");
 
 const express = require('express');
 
-const routes = express.Router();
+const route = express.Router();
 
 
-routes.get('/add-customer', (req, res, next) => {
+route.get('/add-customer', (req, res, next) => {
     console.log("route 2");
     res.send(`<html>
         <head><body>
@@ -19,7 +19,7 @@ routes.get('/add-customer', (req, res, next) => {
 
 });
 
-routes.post('/customer', (req, res, next) => {
+route.post('/customer', (req, res, next) => {
     console.log(req.body);
     res.send(req.body);
 
@@ -27,5 +27,5 @@ routes.post('/customer', (req, res, next) => {
 
 
 
-module.exports = routes;
+module.exports = route;
 

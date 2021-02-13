@@ -1,8 +1,8 @@
 const express = require('express');
 
-const routes = express.Router();
+const route = express.Router();
 
-routes.get('/', (req, res, next) => {
+route.get('/', (req, res, next) => {
     console.log("DEFAULT PATH");
     res.send("<html><head><body><h1>I AM NODE JS SERVER WITH EXPRESS JS...path = /</h2></body></head></html>")
     next(); //going to next line of route 
@@ -10,4 +10,4 @@ routes.get('/', (req, res, next) => {
 });
 
 
-module.exports = routes;
+module.exports = route;
