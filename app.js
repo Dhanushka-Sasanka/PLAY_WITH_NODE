@@ -3,14 +3,13 @@ const app = experss();
 const bodyParser = require('body-parser');
 const path = require('path');
 
-
 // routes
 const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
-
 app.use(bodyParser.urlencoded({extends:false}));
 // app.use(bodyParser.urlencoded({extends:false}));
+app.use(experss.static(path.join(__dirname, './public')));
 
 app.use(adminRoutes);
 app.use(shopRoutes);

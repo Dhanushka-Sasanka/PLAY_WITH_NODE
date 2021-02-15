@@ -1,0 +1,37 @@
+
+
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        header {
+            width: 100%;
+            background-color: darkolivegreen;
+            height: 60px;
+        }
+        .main-nav__list{
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .main-nav__item{
+          
+           font-family:  sans-serif;
+           font-weight: bold;
+           list-style: none;
+           
+           padding:  1.2rem;
+        }
+        .main-nav__item a{
+            color: black;
+            text-decoration: none;
+        }
+        .main-nav__item a:hover{
+            color:#7d994d;
+        }
+        main{
+            padding: 0 3rem 0 3rem;
+        }
+
